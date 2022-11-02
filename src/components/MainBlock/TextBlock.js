@@ -11,7 +11,7 @@ const TextBlock = (props) => {
   };
 
   return (
-    <div className="topics-container-2">
+    <div className="topics_container-2">
       <GoBack setState={props.setState} />
       {props.textData.map((text, id) => {
         return <Block1 key={id} text={text} onClick={(e) => copyText(e)} />;

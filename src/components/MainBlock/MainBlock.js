@@ -15,7 +15,7 @@ const MainBlock = () => {
 
   const chooseClass = () => {
     let one = topics2(choosedTopic);
-    return one.length > 4 ? "topics-container-2" : "topics-container";
+    return one.length > 4 ? "topics_container-2" : "topics_container";
   };
 
   return (
@@ -37,7 +37,7 @@ const MainBlock = () => {
           ))}
         </div>
       ) : (
-        <div className={"topics-container"}>
+        <div className={"topics_container"}>
           {topics.map((topic) => (
             <Block1
               key={topic}

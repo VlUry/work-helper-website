@@ -1,6 +1,6 @@
 import "./App.css";
 import MainBlock from "./components/MainBlock/MainBlock";
-import Search from "./components/Search";
+import Search from "./components/Search/Search";
 
 function App() {
   return (
