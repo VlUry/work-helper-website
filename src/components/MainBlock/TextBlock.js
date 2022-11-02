@@ -1,3 +1,4 @@
+import GoBack from "../GoBack";
 import Block1 from "./Block1";
 
 const TextBlock = (props) => {
@@ -11,6 +12,7 @@ const TextBlock = (props) => {
 
   return (
     <div className="topics-container-2">
+      <GoBack setState={props.setState} />
       {props.textData.map((text, id) => {
         return <Block1 key={id} text={text} onClick={(e) => copyText(e)} />;
       })}
