@@ -19,6 +19,7 @@
 .block_container {
   overflow: hidden;
   transition: transform .2s;
+  cursor: pointer;
 }
 
 .block {
@@ -36,10 +37,9 @@
 
 .block_container:hover {
   transform: translateY(-20px);
-  cursor: pointer;
 }
 
-.topics2-container {
+.topics-container-2 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -50,9 +50,26 @@
 
 .text {
   font-family: inherit;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
 }
+
+/* .text-to-copy_container {
+  height: 77%;
+  width: 65%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-to-copy {
+  min-width: 300px;
+  max-width: 300px;
+  border: 2px solid grey;
+  border-radius: 7px;
+  margin: 4px;
+  padding: 10px;
+  cursor: pointer;
+} */
 
 .search {
   margin-bottom: 50px;
