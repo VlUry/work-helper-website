@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { textData } from "../../data/data";
 import TextBlock from "./TextBlock";
-import Block1 from "./Block1";
-import GoBack from "../GoBack";
+import TopicBlock from "./TopicBlock";
 
 const MainBlock = () => {
   const [choosedTopic, setChoosedTopic] = useState("");
@@ -26,26 +25,19 @@ const MainBlock = () => {
           setState={setChoosedTopic2}
         />
       ) : choosedTopic ? (
-        <div className={chooseClass()}>
-          <GoBack setState={setChoosedTopic} />
-          {topics2(choosedTopic).map((topic) => (
-            <Block1
-              key={topic}
-              text={topic}
-              onClick={() => setChoosedTopic2(topic)}
-            />
-          ))}
-        </div>
+        <TopicBlock
+          className={chooseClass()}
+          topics={topics2(choosedTopic)}
+          onClick={setChoosedTopic2}
+          goBack={setChoosedTopic}
+        />
       ) : (
-        <div className={"topics-container"}>
-          {topics.map((topic) => (
-            <Block1
-              key={topic}
-              text={topic}
-              onClick={() => setChoosedTopic(topic)}
-            />
-          ))}
-        </div>
+        <TopicBlock
+          className={"topics-container"}
+          topics={topics}
+          onClick={setChoosedTopic}
+          debug={choosedTopic}
+        />
       )}
     </>
   );
