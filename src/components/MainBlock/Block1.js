@@ -1,7 +1,11 @@
 const Block1 = (props) => {
   return (
     <div className="block_container" onClick={props.onClick}>
-      <div className="block">
+      <div
+        className={
+          props.BlockClassName ? `block ${props.BlockClassName}` : "block"
+        }
+      >
         <p className="text">{props.text}</p>
       </div>
     </div>

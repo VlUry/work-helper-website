@@ -33,6 +33,15 @@
   cursor: pointer;
 }
 
+.block_container:hover {
+  transform: translateY(-20px);
+}
+
+.block_container:active {
+  transform: translateY(0);
+  transition: transform .1s;
+}
+
 .block {
   width: 300px;
   height: 350px;
@@ -46,32 +55,12 @@
   text-align: center;
 }
 
-.block_container:hover {
-  transform: translateY(-20px);
-}
-
 .text {
   font-family: inherit;
   font-size: 18px;
   font-weight: 600;
+  user-select: none;
 }
-
-/* .text-to-copy_container {
-  height: 77%;
-  width: 65%;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-to-copy {
-  min-width: 300px;
-  max-width: 300px;
-  border: 2px solid grey;
-  border-radius: 7px;
-  margin: 4px;
-  padding: 10px;
-  cursor: pointer;
-} */
 
 .search {
   margin-bottom: 50px;
@@ -111,4 +100,9 @@
   left: -100px;
   width: 52px;
   height: 54px;
+  transition: .1s;
+}
+
+.copied {
+  background-color: green;
 }
