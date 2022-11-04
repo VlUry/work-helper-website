@@ -75,10 +75,9 @@
 
 .go-back {
   position: absolute;
-  top: calc(50% - 28px);
-  left: -100px;
-  width: 52px;
-  height: 54px;
+  left: 10%;
+  width: 60px;
+  height: 64px;
   transition: .2s;
   cursor: pointer;
 }
@@ -90,18 +89,7 @@
 }
 
 .go-back:hover {
-  top: calc(50% - 32px);
-  left: -104px;
-  width: 60px;
-  height: 62px;
-}
-
-.go-back:active {
-  top: calc(50% - 28px);
-  left: -100px;
-  width: 52px;
-  height: 54px;
-  transition: .1s;
+  transform:translateX(-10px);
 }
 
 .copied {

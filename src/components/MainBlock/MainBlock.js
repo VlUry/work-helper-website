@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { textData } from "../../data/data";
+import GoBack from "../GoBack";
 import TextBlock from "./TextBlock";
 import TopicBlock from "./TopicBlock";
 

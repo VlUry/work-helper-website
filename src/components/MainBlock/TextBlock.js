@@ -40,8 +40,8 @@ const TextBlock = (props) => {
           <p className="text">Скопировано</p>
         </div>
       )}
+      <GoBack setState={props.setState} />
       <div className={props.className}>
-        <GoBack setState={props.setState} />
         {props.textData.map((text, id) => (
           <Block1
             key={id}
