@@ -12,21 +12,21 @@ const MainBlock = () => {
     return Object.keys(textData[key]);
   };
 
-  const chooseClass = () => {
-    let one = topics2(choosedTopic);
-    return one.length > 4 ? "topics-container-2" : "topics-container";
+  const chooseClass = (arr) => {
+    return arr.length > 4 ? "topics-container-2" : "topics-container";
   };
 
   return (
     <>
       {choosedTopic2 ? (
         <TextBlock
+          className={chooseClass(textData[choosedTopic][choosedTopic2])}
           textData={textData[choosedTopic][choosedTopic2]}
           setState={setChoosedTopic2}
         />
       ) : choosedTopic ? (
         <TopicBlock
-          className={chooseClass()}
+          className={chooseClass(topics2(choosedTopic))}
           topics={topics2(choosedTopic)}
           onClick={setChoosedTopic2}
           goBack={setChoosedTopic}
