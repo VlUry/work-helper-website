@@ -5,7 +5,7 @@ import Block1 from "./Block1";
 const TextBlock = (props) => {
   const [showCopiedBlock, setShowCopiedBlock] = useState(false);
 
-  const copyText = (e) => {
+  const handleCopyText = (e) => {
     const textToCopy = e.target
       .closest("div")
       .querySelector(".text").textContent;
@@ -20,7 +20,7 @@ const TextBlock = (props) => {
     setTimeout(() => setShowCopiedBlock(false), 700);
   };
 
-  const toggleCopiedBlock = (e) => {
+  const handleToggleCopiedBlock = (e) => {
     const blocks =
       e.target.closest(".topics-container") ||
       e.target.closest(".topics-container-2");
@@ -47,8 +47,8 @@ const TextBlock = (props) => {
             key={id}
             text={text}
             onClick={(e) => {
-              copyText(e);
-              toggleCopiedBlock(e);
+              handleCopyText(e);
+              handleToggleCopiedBlock(e);
             }}
           />
         ))}
